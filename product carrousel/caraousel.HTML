@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        .swiper-wrapper {
+            width: fit-content;
+            padding: 20px;
+            text-align: center;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide {
+            width: 100%;
+            height: 390px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-slide button {
+            width: 100%;
+            height: 40px;
+            background-color: #fff;
+            border: 2px solid #f96302;
+            color: #f96302;
+        }
+
+        .swiper-slide p:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .swiper-slide button:hover {
+            background-color: #f96302;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #f96302;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div #swiperRef="" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</body>
+
+</html>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 6,
+        centeredSlides: false,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "none",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    let object2 = [
+        {
+            image: "https://images.thdstatic.com/productImages/5248be12-ff60-4e78-b924-271aed1e90cc/svn/ghostbed-bed-pillows-11gbpw010-64_300.jpg",
+            span: "GHOSTBED",
+            detail: "Cool To The Touch Soft Memory Foam Standard Pillow",
+        }, {
+            image: "https://images.thdstatic.com/productImages/64e6fb90-fcb2-4acc-8cd1-b7d3c533ee6a/svn/ghostbed-bed-pillows-11gbfdp010-64_300.jpg",
+            span: "GHOSTBED",
+            detail: "Faux Down Soft Microfiber Gel Memory Foam Standard Pillow",
+        }, {
+            image: "https://images.thdstatic.com/productImages/c317f15c-8fe8-4832-8e85-c28db2086ee8/svn/mint-home-dynamix-bathroom-rugs-bath-mats-10-dmd-411-64_300.jpg",
+            span: "Home Dynamix",
+            detail: "Capri Haven Mint 17 in. x 24 in. Memory Foam Bath Mat",
+        }, {
+            image: "https://images.thdstatic.com/productImages/04ca72f7-c0a0-4c77-bd56-56486b9b42f0/svn/multi-color-the-clean-store-bath-towels-148-64_300.jpg",
+            span: "THE CLEAN STORE",
+            detail: "Washcloths Cleaning (60-Pack)",
+        }, {
+            image: "https://images.thdstatic.com/productImages/1b20ecbf-22d9-47a2-8cf1-f49b5e3082ed/svn/white-home-dynamix-bathroom-rugs-bath-mats-2-omstr-105-64_300.jpg",
+            span: "Home Dynamix",
+            detail: "Ombre Element White/Ivory 20 in. x 32 in. Stripe Polyester Bath Mat",
+        }, {
+            image: "https://images.thdstatic.com/productImages/1db068e7-38f0-4dac-acf9-3a086f200517/svn/white-bath-towels-149-64_300.jpg",
+            span: "Hand Towel ",
+            detail: "Standard Towel (Set of 12)",
+        }, {
+            image: "https://images.thdstatic.com/productImages/d6537990-a94b-415c-a449-c07371975e80/svn/zinus-mattress-toppers-hd-gtft-150sq-64_300.jpg",
+            span: "Zinus",
+            detail: "Zinus in. Medium No Pocket Memory Foam Short Queen Mattress Topper",
+        }, {
+            image: "https://images.thdstatic.com/productImages/d0f91a8a-a6fc-4eda-8bb7-a86d4d1ff162/svn/zinus-mattress-toppers-hd-gtft-400sq-64_300.jpg",
+            span: "Zinus",
+            detail: "Zinus 4 in. Medium No Pocket Memory Foam Short Queen Mattress Topper",
+        }, {
+            image: "https://images.thdstatic.com/productImages/b37d798b-bbd7-426d-803e-7d3796112384/svn/white-bath-towels-78-64_300.jpg",
+            span: "Cotton Wash Cloth",
+            detail: "Standard Wash Cloth (Set of 24)",
+        }, {
+            image: "https://images.thdstatic.com/productImages/c278150f-2c66-489e-8996-9d020772aa99/svn/nuwallpaper-wallpaper-rolls-nus3161-64_300.jpg",
+            span: "NuWallpaper",
+            detail: "Lemon Drop Yellow Vinyl Peel & Stick Wallpaper Roll (Covers 30.75 Sq. Ft.)",
+        }, {
+            image: "https://images.thdstatic.com/productImages/7cba3210-0657-4718-84ed-fa3ee9309c6f/svn/nuwallpaper-wallpaper-rolls-nu2875-64_300.jpg",
+            span: "NuWallpaper",
+            detail: "Cream Grassweave Vinyl Peel & Stick Wallpaper Roll (Covers 30.75 Sq. Ft.)",
+        }, {
+            image: "https://images.thdstatic.com/productImages/7beb2d3e-207c-4b0c-a183-3c218820f1dd/svn/multi-color-empire-art-direct-posters-art-prints-tmp-ead0626-3672-64_300.jpg",
+            span: "Empire Art Direct",
+            detail: "'The Falls' Frameless Free Floating Tempered Art Glass by EAD Art Coop Wall Art",
+        },
+    ]
+
+    appendSponsered(object2)
+
+    function appendSponsered(arr) {
+        let x = ` `;
+        arr.map((el) => {
+            x += `  <div class="swiper-slide">
+          <img
+            src= ${el.image}
+            alt="">
+          <p><b>${el.span}</b> ${el.detail}</p>
+          <h5>Rs. ${Math.floor(Math.random() * 2000) + 500} </h5>
+          <button><b>Add To Cart</b></button>
+        </div>`
+        });
+        document.querySelector(".swiper-wrapper").innerHTML = x;
+    }
+
+</script>

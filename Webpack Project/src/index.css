@@ -1,0 +1,12 @@
+.heading>{
+background-color: crimson;
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+.heading>img{
+ width: 100px;
+}
+.smallDiv>img{
+  width: 100px;
+ }
