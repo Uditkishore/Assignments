@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
+
+import Spinner from 'react-bootstrap/Spinner';
 
 export const HomePage = () => {
   const navigate = useNavigate();
@@ -30,9 +31,9 @@ export const HomePage = () => {
           gap: "10px",
         }}
       >
-        {array.map((el) => {
+        {array && array.length ? <>{array.map((el) => {
           return (
-            <Link key={el.id} to={``}>
+            <div key={el.id} to={`/products/${el.id}`}>
               <img width="120px" src={el.image} alt="" />
               <h1
                 style={{
@@ -42,9 +43,12 @@ export const HomePage = () => {
               >
                 {el.title}
               </h1>
-            </Link>
+            </div>
           );
-        })}
+        })}</> :
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>}
       </div>
     </>
   );

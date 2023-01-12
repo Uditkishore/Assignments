@@ -11,7 +11,7 @@ export const Routing = () => {
       <Navbar />
       <Routes>
         <Route path={"/"} element={<HomePage />}></Route>
-        <Route   path={"/products"} element={<ProductsPage />}></Route>
+        <Route path={"/products"} element={<ProductsPage />}></Route>
         <Route path={"/products/:id"} element={<ProductsDetailsPage />}></Route>
         <Route path={"*"} element={<NotFoundPage />} />
       </Routes>
